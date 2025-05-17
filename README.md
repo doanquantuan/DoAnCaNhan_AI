@@ -11,7 +11,7 @@ Mỗi bước đi thực hiện bằng cách **trượt một ô liền kề và
 🎯 **Mục tiêu:**  
 Từ một **trạng thái ban đầu**, di chuyển các ô để đạt đến **trạng thái đích** đúng thứ tự.  
 
-Trong đồ án này, ta sử dụng các **thuật toán tìm kiếm không có thông tin (uninformed search)** để giải bài toán và so sánh hiệu suất giữa các thuật toán dựa trên:
+Trong đồ án này, ta sử dụng các **thuật toán tìm kiếm AI** để giải bài toán và so sánh hiệu suất giữa các thuật toán dựa trên:
 - Độ dài lời giải
 - Thời gian thực thi
 - Số trạng thái đã duyệt
@@ -39,8 +39,7 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 - **Trạng thái đầu**: Cấu hình ban đầu của ô số.
 - **Trạng thái đích**: Cấu hình đúng thứ tự mong muốn.
 - **Hành động**: Di chuyển ô trống (↑ ↓ ← →).
-- **Chi phí**: Tổng số bước đi (mỗi bước = 1 đơn vị).
-
+- **Chi phí**: Tổng chi phí tích lũy để đi từ trạng thái đầu đến trạng thái đích (nếu có trọng số tùy vào bài toán có đặt hay không).
 #### 🛠️ Giải pháp chung:
 1. Khởi tạo trạng thái ban đầu và đích  
 2. Duyệt không gian trạng thái bằng thuật toán đã chọn  
@@ -54,18 +53,15 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 #### ✅ Một vài nhận xét:
 | Thuật toán | Tối ưu | Bộ nhớ | Tốc độ | Nhận xét |
 |------------|--------|--------|--------|----------|
-| **BFS**    | ✅     | ❌     | ⚠️     | Lời giải ngắn, nhưng tốn RAM |
-| **DFS**    | ❌     | ✅     | ✅     | Lời giải dài, dễ lặp, không tối ưu |
-| **IDS**    | ✅     | ✅     | ❌     | Cân bằng giữa tối ưu và bộ nhớ |
-| **UCS**    | ✅     | ❌     | ⚠️     | Tốt nếu chi phí không đều |
+| **BFS**    | ✅     | ❌     | ✅     | Tìm ra lời giải ngắn nhất, số node duyệt qua ít nhất và thời gian thực thi ngắn nhất => Hiệu suất tốt nhất |
+| **DFS**    | ❌     | ❌     | ❌     | Tìm ra lời giải dài nhất, số node duyệt qua nhiều nhất và thời gian thực thi dài nhất và không tối ưu, không đảm bảo tìm ra lời giải (nếu không kiểm soát độ sâu) => Hiệu suất kém nhất. |
+| **IDS**    | ✅     | ❌     | ✅     | Lời giải ngắn (do kết hợp BFS và DFS), tốn thời gian do lặp đi lặp lại nhiều lần các node cùng cấp độ. vẫn chậm trong các trường hợp lời giải sâu. |
+| **UCS**    | ✅     | ❌     | ✅     | Lời giải tối ưu dựa trên tổng chi, thời gian tốt hơn IDS và tiết kiệm không gian lưu trữ => Hiệu quả khi các bước có chi phí không đồng đều.
+ |
 
 ---
 
 ## 📝 3. Kết Luận
-
-- Bài toán 8-Puzzle là một minh chứng thực tiễn để đánh giá sức mạnh và hạn chế của các thuật toán tìm kiếm không có thông tin.  
-- Mỗi thuật toán có ưu – nhược điểm riêng.  
-- Trong môi trường không gian trạng thái lớn, việc chọn đúng thuật toán sẽ ảnh hưởng lớn đến **hiệu suất và kết quả** cuối cùng.
 
 ---
 
