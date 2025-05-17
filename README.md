@@ -89,6 +89,38 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh gi
 - Thêm vào danh sách mở rộng nếu chưa được duyệt hoặc có chi phí tốt hơn.
 4. Lặp đến khi tìm được lời giải hoặc không còn trạng thái nào.
 
+### 2.3. 🔍 Các Thuật Toán Tìm Kiếm Cục Bộ (Local Search)
+
+Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà không cần phải duyệt toàn bộ không gian trạng thái. Thay vào đó, nó chỉ tập trung vào một **trạng thái hiện tại** và các **trạng thái lân cận** của nó.
+
+
+#### 🧠 Các thuật toán được áp dụng:
+- 🔹 **Simple Hill Climbing**:  
+   Chọn ngay lập tức một trạng thái lân cận tốt hơn, dừng khi không có trạng thái tốt hơn.
+- 🔹 **Steepest-Ascent Hill Climbing**:  
+   Duyệt qua tất cả các trạng thái lân cận, chọn ra trạng thái tốt nhất trong số đó rồi chuyển đến.
+- 🔹 **Stochastic Hill Climbing**:  
+   Chọn ngẫu nhiên trong số các trạng thái tốt hơn.
+- 🔹 **Simulated Annealing**:  
+   Chấp nhận trạng thái tệ hơn để thoát khỏi cực trị địa phương.
+- 🔹 **Local Beam Search**:  
+   Theo dõi nhiều trạng thái cùng lúc, giữ lại k trạng thái tốt nhất để tiếp tục mở rộng. 
+- 🔹 **Genetic Algorithm**:  
+   Dựa vào quá trình tiến hóa tự nhiên (chọn lọc, lai ghép, đột biến). Làm việc với quần thể trạng thái.
+
+#### 🧩 Các thành phần của bài toán tìm kiếm:
+- **Không gian trạng thái**: Tất cả các cấu hình có thể của bảng 3x3 và chỉ khai thác cục bộ quanh trạng thái hiện tại.
+- **Trạng thái đầu**: Cấu hình ban đầu của ô số.
+- **Trạng thái đích**: Cấu hình đúng thứ tự mong muốn.
+- **Hành động**: Di chuyển ô trống (↑ ↓ ← →).
+- **Chi phí**: Chi phí tốt nhất ở trạng thái đang xét.
+
+#### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
+
+#### 📊 So Sánh Hiệu Suất Thuật Toán
+
+#### ✅ Một vài nhận xét:
+
 ## 📝 3. Kết Luận
 
 ---
