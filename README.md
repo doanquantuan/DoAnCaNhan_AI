@@ -192,6 +192,8 @@ Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà kh
 ![Thuật toán Beam](AI/beam.gif)
 
 6. Genetic Algorithm
+
+
 ![Thuật toán Genetic](AI/genetic.gif)
 
 #### 📊 So Sánh Hiệu Suất Thuật Toán
