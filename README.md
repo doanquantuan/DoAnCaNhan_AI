@@ -49,7 +49,7 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
-![Thuật toán BFS](./bfs.gif)
+![Thuật toán BFS](AI/bfs.gif)
 
 
 ### 📊 Đánh Giá Hiệu Suất Thuật Toán
