@@ -11,4 +11,18 @@
 ##### - DFS (Depth-First Search) – Tìm kiếm theo chiều sâu: mở rộng sâu theo từng nhánh, ít tốn bộ nhớ nhưng không đảm bảo tìm được lời giải tối ưu.
 ##### - IDS (Iterative Deepening Search) – Tìm kiếm theo chiều sâu lặp lại: kết hợp DFS và BFS, mở rộng theo từng mức độ sâu giới hạn, vừa tiết kiệm bộ nhớ như DFS, vừa đảm bảo tối ưu như BFS.
 ##### - UCS (Uniform Cost Search) – Tìm kiếm theo chi phí đồng đều: mở rộng nút có tổng chi phí đường đi thấp nhất, đảm bảo tìm được lời giải có chi phí thấp nhất.
+####
+#### Các thành phần chính của bài toán tìm kiếm:
+##### - Không gian trạng thái: tất cả các trạng thái có thể có trong môi trường.
+##### - Trạng thái đầu: là 1 trạng thái đơn lẻ.
+##### - Trạng thái đích: là trạng thái mong muốn đạt được sau khi sắp xếp.
+##### - Hành động: di chuyển ô trống lên, xuống, trái, phải.
+##### - Chi phí: tổng chi phí tích lũy để đi từ trạng thái đầu đến trạng thái đích (nếu có trọng số tùy vào bài toán có đặt hay không).
+####
+#### Giải pháp:
+##### - Khởi tạo trạng thái ban đầu.
+##### - Xác định trạng thái đích.
+##### - Lưu trữ trạng thái đã đi qua để tránh lặp lại.
+##### - Duyệt không gian trạng thái.
+##### - Kiểm tra khi trạng thái mở rộng trùng với trạng thái đích, trả về lời giải.
 ## 3. Kết luận 📝
