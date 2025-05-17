@@ -8,13 +8,13 @@
 
 ## 🎯 1. Mục Tiêu
 
-Bài toán **8-Puzzle** là một bài toán cổ điển trong Trí tuệ nhân tạo. Nó gồm một bảng 3x3 với 8 ô được đánh số từ `1 → 8` và **1 ô trống**.  
-Mỗi bước đi thực hiện bằng cách **trượt một ô liền kề vào ô trống**.
+Bài toán 8-Puzzle là một bài toán cổ điển trong Trí tuệ nhân tạo. Nó gồm một bảng 3x3 với 8 ô được đánh số từ `1 → 8` và 1 ô trống.  
+Mỗi bước đi thực hiện bằng cách trượt một ô liền kề vào ô trống.
 
 🎯 **Mục tiêu:**  
-Từ một **trạng thái ban đầu**, di chuyển các ô để đạt đến **trạng thái đích** đúng thứ tự.  
+Từ một trạng thái ban đầu, di chuyển các ô để đạt đến trạng thái đích đúng thứ tự.  
 
-Trong đồ án này, ta sử dụng các **thuật toán tìm kiếm AI** để giải bài toán và so sánh hiệu suất giữa các thuật toán dựa trên:
+Trong đồ án này, ta sử dụng các thuật toán tìm kiếm AI để giải bài toán và so sánh hiệu suất giữa các thuật toán dựa trên:
 - Độ dài lời giải
 - Thời gian thực thi
 - Số trạng thái đã duyệt
@@ -25,7 +25,7 @@ Trong đồ án này, ta sử dụng các **thuật toán tìm kiếm AI** để
 
 ### 2.1. 🔍 Các Thuật Toán Tìm Kiếm Không Có Thông Tin (Uninformed Search)
 
-Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước lượng** từ trạng thái hiện tại đến đích. Chúng **duyệt không gian trạng thái một cách mù quáng** và không đảm bảo hiệu quả cao.
+Uninformed Search là nhóm thuật toán không sử dụng thông tin ước lượng từ trạng thái hiện tại đến đích. Chúng duyệt không gian trạng thái một cách mù quáng và không đảm bảo hiệu quả cao.
 
 #### 🧠 Các thuật toán được áp dụng:
 - 🔹 **BFS (Breadth-First Search)**:  
@@ -73,6 +73,7 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 
 3. So sánh số bước lời giải
 ![So sánh số bước](AI/Figure_3.png)
+
 #### ✅ Một vài nhận xét:
 | Thuật toán | Tối ưu | Bộ nhớ | Tốc độ | Nhận xét |
 |------------|--------|--------|--------|----------|
@@ -84,7 +85,7 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 ---
 ### 2.2. 🔍 Các Thuật Toán Tìm Kiếm Có Thông Tin (Informed Search)
 
-Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh giá (heuristic function)** để ước lượng khoảng cách từ trạng thái hiện tại đến trạng thái đích giúp tối ưu lời giải và giảm thiểu thời gian và số trạng thái phải duyệt.
+Informed Search là nhóm thuật toán tìm kiếm sử dụng hàm đánh giá (heuristic function) để ước lượng khoảng cách từ trạng thái hiện tại đến trạng thái đích giúp tối ưu lời giải và giảm thiểu thời gian và số trạng thái phải duyệt.
 
 
 #### 🧠 Các thuật toán được áp dụng:
@@ -141,7 +142,7 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh gi
 ---
 ### 2.3. 🔍 Các Thuật Toán Tìm Kiếm Cục Bộ (Local Search)
 
-Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà không cần phải duyệt toàn bộ không gian trạng thái. Thay vào đó, nó chỉ tập trung vào một **trạng thái hiện tại** và các **trạng thái lân cận** của nó.
+Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà không cần phải duyệt toàn bộ không gian trạng thái. Thay vào đó, nó chỉ tập trung vào một trạng thái hiện tại và các trạng thái lân cận của nó.
 
 
 #### 🧠 Các thuật toán được áp dụng:
@@ -179,7 +180,7 @@ Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà kh
 ![Thuật toán Simple Hill Climbing](AI/simple-hc.gif)
 
 2. Steepest-Ascent Hill Climbing
-![Thuật toán Steepest-Ascent Hill Climbing](AI/steepest-sscent-hc.gif)
+![Thuật toán Steepest-Ascent Hill Climbing](AI/steepest-ascent-hc.gif)
 
 3. Stochastic Hill Climbing
 ![Thuật toán Stochastic Hill Climbing](AI/stochastic-hc.gif)
@@ -198,9 +199,9 @@ Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà kh
 #### ✅ Một vài nhận xét:
 
 ---
-### 🔍 Các Thuật Toán Tìm Kiếm Trong Môi Trường Phức Tạp (Searching In Complex Environments)
+### 2.4. 🔍 Các Thuật Toán Tìm Kiếm Trong Môi Trường Phức Tạp (Searching In Complex Environments)
 
-Searching In Complex Environments là tìm kiếm trong các môi trường bất định và không chính xác. Các môi trường này có thể có các yếu tố như có cấu trúc tìm kiếm phức tạp với các hành động cho kết quả **không chắc chắn**, **không thể biết chính xác trạng thái hiện tại** hay **chỉ quan sát được được một phần thông tin**.
+Searching In Complex Environments là tìm kiếm trong các môi trường bất định và không chính xác. Các môi trường này có thể có các yếu tố như có cấu trúc tìm kiếm phức tạp với các hành động cho kết quả không chắc chắn, không thể biết chính xác trạng thái hiện tại hay chỉ quan sát được được một phần thông tin.
 
 #### 🧠 Các thuật toán được áp dụng:
 - 🔹 **And Or Search**:
@@ -224,6 +225,37 @@ Searching In Complex Environments là tìm kiếm trong các môi trường bấ
 5. Cập nhật belief state liên tục: Sau mỗi bước, cập nhật lại trạng thái.
 6. Ra quyết định dựa trên thông tin hiện có: Chọn hành động tối ưu dựa trên khả năng thành công.
 
+#### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
+
+1. And Or Search
+
+2. Searching With No Observation
+
+3. Searching For Partially Observation
+
+
+#### 📊 So Sánh Hiệu Suất Thuật Toán
+
+#### ✅ Một vài nhận xét:
+
+---
+### 2.5. Các thuật toán thỏa mãn ràng buộc (Constraint Satisfaction Problem - CSP)
+
+CSP là một bài toán trong trí tuệ nhân tạo mà lời giải là một tập giá trị gán cho các biến sao cho thỏa mãn toàn bộ ràng buộc (constraints) đã cho trước.
+
+#### 🧠 Các thuật toán được áp dụng:
+- 🔹 **Generate And Test**:
+   Liệt kê tất cả các khả năng có thể, sau đó kiểm tra xem khả năng nào thoả mãn tất cả các ràng buộc.
+- 🔹 **Backtracking**:  
+   Duyệt từng biến, thử từng giá trị trong miền, lùi lại (backtrack) nếu không thoả mãn ràng buộc.
+- 🔹 **AC-3**:  
+   Lan truyền ràng buộc (Constraint Propagation). Nó loại bỏ các giá trị không hợp lệ khỏi miền giá trị của biến trước khi bắt đầu tìm kiếm.
+
+#### 🧩 Các thành phần của bài toán tìm kiếm:
+- Biến: Mỗi ô là 1 biến (8 biến và 1 ô trống).
+- Miền giá trị: {1, 2,…, 8}
+- Ràng buộc: Các ô có giá trị khác nhau không trùng lặp và theo thứ tự tăng dần từ trên xuống, từ trái qua phải.
+#### 🛠️ Giải pháp chung: Gán giá trị cho tất cả các biến đảm bảo thỏa mãn ràng buộc.
 ## 📝 3. Kết Luận
 
 ---
