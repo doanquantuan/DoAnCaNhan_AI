@@ -34,7 +34,7 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 - 🔹 **UCS (Uniform Cost Search)**:  
   Mở rộng node có tổng chi phí nhỏ nhất → tối ưu về chi phí nếu bước đi có trọng số.
 
-#### 🧩 Cấu trúc bài toán 8-Puzzle:
+#### 🧩 Các thành phần của bài toán tìm kiếm:
 - **Không gian trạng thái**: Tất cả các cấu hình có thể của bảng 3x3.
 - **Trạng thái đầu**: Cấu hình ban đầu của ô số.
 - **Trạng thái đích**: Cấu hình đúng thứ tự mong muốn.
@@ -92,13 +92,12 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh gi
 - 🔹 **IDA Star (Iterative Deepening A Star)**:  
   Tìm kiếm theo chiều sâu (DFS) lặp lại, nhưng với ngưỡng cắt (threshold) f(n) = g(n) + h(n).
 
-#### 🧩 Cấu trúc bài toán 8-Puzzle:
+#### 🧩 Các thành phần của bài toán tìm kiếm:
 - **Không gian trạng thái**: Tất cả các cấu hình có thể của bảng 3x3.
 - **Trạng thái đầu**: Cấu hình ban đầu của ô số.
 - **Trạng thái đích**: Cấu hình đúng thứ tự mong muốn.
 - **Hành động**: Di chuyển ô trống (↑ ↓ ← →).
 - **Chi phí**: Tổng chi phí tích lũy để đi từ trạng thái đầu đến trạng thái hiện tại + ước lượng chi phí từ trạng thái điện tại đến đích (f(n) = g(n) + h(n)).
-
 #### 🛠️ Giải pháp chung:
 1. Khởi tạo hàng đợi ưu tiên hoặc hàm lặp sâu (tùy thuật toán).
 2. Thêm trạng thái ban đầu với chi phí vào danh sách mở rộng.
@@ -110,6 +109,31 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh gi
 - Thêm vào danh sách mở rộng nếu chưa được duyệt hoặc có chi phí tốt hơn.
 4. Lặp đến khi tìm được lời giải hoặc không còn trạng thái nào.
 
+
+#### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
+
+1. Greedy Best-First Search
+![Thuật toán Greedy](AI/greedy.gif)
+
+2. A* Search
+![Thuật toán A*](AI/a_star.gif)
+
+4. IDA* Search
+![Thuật toán IDA*](AI/ida_star.gif)
+
+### 📊 So Sánh Hiệu Suất Thuật Toán
+
+1. So sánh thời gian thực hiện thuật toán
+![So sánh thời gian](AI/Figure_4.png)
+
+2. So sánh số node đã duyệt
+![So sánh số node](AI/Figure_5.png)
+
+3. So sánh số bước lời giải
+![So sánh số bước](AI/Figure_6.png)
+
+4. So sánh chi phí
+![So sánh chi phí](AI/Figure_7.png)
 ### 2.3. 🔍 Các Thuật Toán Tìm Kiếm Cục Bộ (Local Search)
 
 Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà không cần phải duyệt toàn bộ không gian trạng thái. Thay vào đó, nó chỉ tập trung vào một **trạng thái hiện tại** và các **trạng thái lân cận** của nó.
