@@ -39,7 +39,7 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 - **Trạng thái đầu**: Cấu hình ban đầu của ô số.
 - **Trạng thái đích**: Cấu hình đúng thứ tự mong muốn.
 - **Hành động**: Di chuyển ô trống (↑ ↓ ← →).
-- **Chi phí**: Tổng chi phí tích lũy để đi từ trạng thái đầu đến trạng thái đích (nếu có trọng số tùy vào bài toán có đặt hay không).
+- **Chi phí**: Tổng chi phí tích lũy để đi từ trạng thái đầu đến trạng thái hiện tại (nếu có trọng số tùy vào bài toán có đặt hay không).
 #### 🛠️ Giải pháp chung:
 1. Khởi tạo trạng thái ban đầu và đích  
 2. Duyệt không gian trạng thái bằng thuật toán đã chọn  
@@ -56,10 +56,39 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 | **BFS**    | ✅     | ❌     | ✅     | Tìm ra lời giải ngắn nhất, số node duyệt qua ít nhất và thời gian thực thi ngắn nhất => Hiệu suất tốt nhất |
 | **DFS**    | ❌     | ❌     | ❌     | Tìm ra lời giải dài nhất, số node duyệt qua nhiều nhất và thời gian thực thi dài nhất và không tối ưu, không đảm bảo tìm ra lời giải (nếu không kiểm soát độ sâu) => Hiệu suất kém nhất. |
 | **IDS**    | ✅     | ❌     | ✅     | Lời giải ngắn (do kết hợp BFS và DFS), tốn thời gian do lặp đi lặp lại nhiều lần các node cùng cấp độ. vẫn chậm trong các trường hợp lời giải sâu. |
-| **UCS**    | ✅     | ❌     | ✅     | Lời giải tối ưu dựa trên tổng chi, thời gian tốt hơn IDS và tiết kiệm không gian lưu trữ => Hiệu quả khi các bước có chi phí không đồng đều.
- |
+| **UCS**    | ✅     | ❌     | ✅     | Lời giải tối ưu dựa trên tổng chi, thời gian tốt hơn IDS và tiết kiệm không gian lưu trữ => Hiệu quả khi các bước có chi phí không đồng đều.|
 
 ---
+### 2.1. 🔍 Các Thuật Toán Tìm Kiếm Có Thông Tin (Informed Search)
+
+Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh giá (heuristic function)** để ước lượng khoảng cách từ trạng thái hiện tại đến trạng thái đích giúp tối ưu lời giải và giảm thiểu thời gian và số trạng thái phải duyệt.
+
+
+#### 🧠 Các thuật toán được áp dụng:
+- 🔹 **Greedy Best-First Search**:  
+  Mở rộng các node gần đích nhất theo heuristi.
+- 🔹 **A Star Search**:  
+  Mở rộng các node bằng cách xem xét chi phí tích lũy và chi phí ước lượng (heuristic) f(n) = g(n) + h(n).
+- 🔹 **IDA Star (Iterative Deepening A Star)**:  
+  tìm kiếm theo chiều sâu (DFS) lặp lại, nhưng với ngưỡng cắt (threshold) f(n) = g(n) + h(n).
+
+#### 🧩 Cấu trúc bài toán 8-Puzzle:
+- **Không gian trạng thái**: Tất cả các cấu hình có thể của bảng 3x3.
+- **Trạng thái đầu**: Cấu hình ban đầu của ô số.
+- **Trạng thái đích**: Cấu hình đúng thứ tự mong muốn.
+- **Hành động**: Di chuyển ô trống (↑ ↓ ← →).
+- **Chi phí**: Tổng chi phí tích lũy để đi từ trạng thái đầu đến trạng thái hiện tại + ước lượng chi phí từ trạng thái điện tại đến đích (f(n) = g(n) + h(n)).
+
+#### 🛠️ Giải pháp chung:
+1. Khởi tạo hàng đợi ưu tiên hoặc hàm lặp sâu (tùy thuật toán).
+2. Thêm trạng thái ban đầu với chi phí vào danh sách mở rộng.
+3. Lặp:
+- Lấy trạng thái có chi phí thấp nhất ra.
+- Nếu là trạng thái đích → Trả về lời giải.
+- Mở rộng trạng thái (theo hành động hợp lệ).
+- Tính chi phí cho mỗi trạng thái mới.
+- Thêm vào danh sách mở rộng nếu chưa được duyệt hoặc có chi phí tốt hơn.
+4. Lặp đến khi tìm được lời giải hoặc không còn trạng thái nào.
 
 ## 📝 3. Kết Luận
 
