@@ -25,13 +25,13 @@ Trong đồ án này, ta sử dụng các **thuật toán tìm kiếm AI** để
 Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước lượng** từ trạng thái hiện tại đến đích. Chúng **duyệt không gian trạng thái một cách mù quáng** và không đảm bảo hiệu quả cao.
 
 #### 🧠 Các thuật toán được áp dụng:
- 🔹 **BFS (Breadth-First Search)**:  
+- 🔹 **BFS (Breadth-First Search)**:  
   Mở rộng các node theo tầng → tìm được lời giải ngắn nhất (nếu chi phí bằng nhau).  
- 🔹 **DFS (Depth-First Search)**:  
+- 🔹 **DFS (Depth-First Search)**:  
   Mở rộng theo nhánh sâu nhất trước → tiết kiệm bộ nhớ, nhưng dễ lặp vô hạn, không tối ưu.
- 🔹 **IDS (Iterative Deepening Search)**:  
+- 🔹 **IDS (Iterative Deepening Search)**:  
   Lặp DFS với độ sâu tăng dần → kết hợp ưu điểm của BFS và DFS.
- 🔹 **UCS (Uniform Cost Search)**:  
+- 🔹 **UCS (Uniform Cost Search)**:  
   Mở rộng node có tổng chi phí nhỏ nhất → tối ưu về chi phí nếu bước đi có trọng số.
 
 #### 🧩 Cấu trúc bài toán 8-Puzzle:
@@ -65,11 +65,11 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh gi
 
 
 #### 🧠 Các thuật toán được áp dụng:
- 🔹 **Greedy Best-First Search**:  
+- 🔹 **Greedy Best-First Search**:  
   Mở rộng các node gần đích nhất theo heuristi.
- 🔹 **A Star Search**:  
+- 🔹 **A Star Search**:  
   Mở rộng các node bằng cách xem xét chi phí tích lũy và chi phí ước lượng (heuristic) f(n) = g(n) + h(n).
- 🔹 **IDA Star (Iterative Deepening A Star)**:  
+- 🔹 **IDA Star (Iterative Deepening A Star)**:  
   Tìm kiếm theo chiều sâu (DFS) lặp lại, nhưng với ngưỡng cắt (threshold) f(n) = g(n) + h(n).
 
 #### 🧩 Cấu trúc bài toán 8-Puzzle:
