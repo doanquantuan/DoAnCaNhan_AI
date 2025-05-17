@@ -46,9 +46,8 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 3. Lưu vết trạng thái đã đi qua để tránh vòng lặp  
 4. Khi đạt đến trạng thái đích → trả về lời giải  
 
----
 
-### 📊 2.2. Đánh Giá Hiệu Suất Thuật Toán
+### 📊 Đánh Giá Hiệu Suất Thuật Toán
 
 #### ✅ Một vài nhận xét:
 | Thuật toán | Tối ưu | Bộ nhớ | Tốc độ | Nhận xét |
@@ -59,7 +58,7 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 | **UCS**    | ✅     | ❌     | ✅     | Lời giải tối ưu dựa trên tổng chi, thời gian tốt hơn IDS và tiết kiệm không gian lưu trữ => Hiệu quả khi các bước có chi phí không đồng đều.|
 
 ---
-### 2.1. 🔍 Các Thuật Toán Tìm Kiếm Có Thông Tin (Informed Search)
+### 2.2. 🔍 Các Thuật Toán Tìm Kiếm Có Thông Tin (Informed Search)
 
 Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh giá (heuristic function)** để ước lượng khoảng cách từ trạng thái hiện tại đến trạng thái đích giúp tối ưu lời giải và giảm thiểu thời gian và số trạng thái phải duyệt.
 
