@@ -1,5 +1,8 @@
-# 🎓 Đồ Án Cá Nhân - Trí Tuệ Nhân Tạo  
-### 👨‍💻 Đoàn Quân Tuấn - MSSV: 23110354  
+# 🎓 Đồ Án Cá Nhân - Bài toán 8 puzzle
+### Họ tên: Đoàn Quân Tuấn
+### MSSV: 23110354  
+### Môn học: Trí Tuệ Nhân Tạo
+### GVHD: Phan Thị Huyền Trang
 
 ---
 
@@ -118,7 +121,7 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh gi
 2. A* Search
 ![Thuật toán A*](AI/a_star.gif)
 
-4. IDA* Search
+3. IDA* Search
 ![Thuật toán IDA*](AI/ida_star.gif)
 
 ### 📊 So Sánh Hiệu Suất Thuật Toán
@@ -134,6 +137,8 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng **hàm đánh gi
 
 4. So sánh chi phí
 ![So sánh chi phí](AI/Figure_7.png)
+
+---
 ### 2.3. 🔍 Các Thuật Toán Tìm Kiếm Cục Bộ (Local Search)
 
 Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà không cần phải duyệt toàn bộ không gian trạng thái. Thay vào đó, nó chỉ tập trung vào một **trạng thái hiện tại** và các **trạng thái lân cận** của nó.
@@ -159,12 +164,65 @@ Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà kh
 - **Trạng thái đích**: Cấu hình đúng thứ tự mong muốn.
 - **Hành động**: Di chuyển ô trống (↑ ↓ ← →).
 - **Chi phí**: Chi phí tốt nhất ở trạng thái đang xét.
+#### 🛠️ Giải pháp chung:
+1. Khởi tạo: Bắt đầu từ một trạng thái ngẫu nhiên hoặc trạng thái ban đầu nào đó.
+2. Lặp lại cho đến khi dừng:
+- Sinh ra các trạng thái lân cận của trạng thái hiện tại.
+- Chọn trạng thái tốt hơn trong các trạng thái lân cận (theo hàm mục tiêu).
+- Chuyển đến trạng thái đó nếu nó cải thiện kết quả.
+- Nếu không có trạng thái nào tốt hơn, kết thúc (có thể đang ở cực trị địa phương).
+3. Trả về trạng thái hiện tại như là lời giải (tốt nhất tìm được).
 
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
+
+1. Simple Hill Climbing
+![Thuật toán Simple Hill Climbing](AI/simple-hc.gif)
+
+2. Steepest-Ascent Hill Climbing
+![Thuật toán Steepest-Ascent Hill Climbing](AI/steepest-sscent-hc.gif)
+
+3. Stochastic Hill Climbing
+![Thuật toán Stochastic Hill Climbing](AI/stochastic-hc.gif)
+
+4. Simulated Annealing
+![Thuật toán Simulated Annealing](AI/sa.gif)
+
+5. Loacl Beam Search
+![Thuật toán Beam](AI/beam.gif)
+
+6. Genetic Algorithm
+![Thuật toán Genetic](AI/genetic.gif)
 
 #### 📊 So Sánh Hiệu Suất Thuật Toán
 
 #### ✅ Một vài nhận xét:
+
+---
+### 🔍 Các Thuật Toán Tìm Kiếm Trong Môi Trường Phức Tạp (Searching In Complex Environments)
+
+Searching In Complex Environments là tìm kiếm trong các môi trường bất định và không chính xác. Các môi trường này có thể có các yếu tố như có cấu trúc tìm kiếm phức tạp với các hành động cho kết quả **không chắc chắn**, **không thể biết chính xác trạng thái hiện tại** hay **chỉ quan sát được được một phần thông tin**.
+
+#### 🧠 Các thuật toán được áp dụng:
+- 🔹 **And Or Search**:
+   Áp dụng trong môi trường không xác định, một hành động có thể dẫn đến nhiều kết quả khác nhau.
+- 🔹 **Searching With No Observation**:  
+   Môi trường hoàn toàn không thể quan sát được trạng thái hiện tại sau mỗi hành động.
+- 🔹 **Searching For Partially Observation**:  
+   Tác nhân có thể quan sát một phần trạng thái hiện tại thông qua cảm biến (sensor).
+  
+#### 🧩 Các thành phần của bài toán tìm kiếm:
+-	Không gian trạng thái: tất cả các trạng thái có thể có trong môi trường.
+-	Hành động: tất cả hành động mà agent có thể thực hiện (lên, xuống, trái, phải).
+-	Trạng thái đầu: là 1 trạng thái đơn lẻ (nếu quan sát được) hoặc 1 tập các trạng thái niềm tin (nếu không thể quan sát hoặc quan sát không đầy đủ).
+-	Mục tiêu: Trạng thái mà agent muốn đạt tới.
+-	Chi phí: Chi phí giữa các hành động.
+#### 🛠️ Giải pháp chung:
+1. Xác định không gian trạng thái: Có thể là trạng thái thật, hoặc tập hợp các trạng thái niềm tin (belief states) nếu không thể quan sát hoàn toàn.
+2. Xây dựng mô hình hành động: Mỗi hành động có thể đưa đến nhiều kết quả khác nhau (không chắc chắn).
+3. Dự đoán và mô phỏng kết quả hành động: Dự đoán trạng thái mới sau hành động (với xác suất hoặc theo cây kế hoạch AND-OR).
+4. Lập kế hoạch hành động thích ứng: Tạo cây hành động mà tác nhân có thể chọn nhánh khác nếu điều kiện thay đổi.
+5. Cập nhật belief state liên tục: Sau mỗi bước, cập nhật lại trạng thái.
+6. Ra quyết định dựa trên thông tin hiện có: Chọn hành động tối ưu dựa trên khả năng thành công.
 
 ## 📝 3. Kết Luận
 
