@@ -44,7 +44,12 @@ Uninformed Search là nhóm thuật toán **không sử dụng thông tin ước
 1. Khởi tạo trạng thái ban đầu và đích  
 2. Duyệt không gian trạng thái bằng thuật toán đã chọn  
 3. Lưu vết trạng thái đã đi qua để tránh vòng lặp  
-4. Khi đạt đến trạng thái đích → trả về lời giải  
+4. Khi đạt đến trạng thái đích → trả về lời giải
+
+
+#### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
+
+![Thuật toán BFS](./bfs.gif)
 
 
 ### 📊 Đánh Giá Hiệu Suất Thuật Toán
