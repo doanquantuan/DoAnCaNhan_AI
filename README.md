@@ -325,7 +325,6 @@ Là chính sách (policy) hoặc dãy hành động sinh ra từ policy tối ư
 
 Q - learning
 
-![Thuật toán q-learning](AI/q_learning.gif)
 
 ## 📝 3. Kết Luận
 
