@@ -258,6 +258,17 @@ Searching In Complex Environments là tìm kiếm trong các môi trường bấ
 
 ![Thuật toán partialOb](AI/partial_observation.gif)
 
+### 📊 So Sánh Hiệu Suất Thuật Toán
+
+1. So sánh thời gian thực hiện thuật toán
+![So sánh thời gian](AI/Figure_11.png)
+
+2. So sánh số node đã duyệt
+![So sánh số node](AI/Figure_12.png)
+
+3. So sánh số bước lời giải
+![So sánh số bước](AI/Figure_113.png)
+
 #### ✅ Một vài nhận xét:
 -	And Or Search: Hiệu suất kém do phải xử lý cây kế hoạch có nhánh AND (số lượng node tăng nhanh nếu có nhiều hành động), đệ quy quá sâu không tìm được lời giải, gây lỗi => Hiệu suất rất thấp
 -	Searching With No Observation: belief state rất lớn, nếu chọn ra các trạng thái niềm tin quá khác nhau dẫn đến thời gian tìm kiếm rất lâu hoặc không tìm ra kế hoạch => hiệu suất thấp.
@@ -298,6 +309,14 @@ Gán giá trị cho tất cả các biến đảm bảo thỏa mãn ràng buộc
 
 ![Thuật toán AC-3](AI/ac_3.gif)
 
+### 📊 So Sánh Hiệu Suất Thuật Toán
+
+1. So sánh thời gian thực hiện thuật toán
+![So sánh thời gian](AI/Figure_14.png)
+
+2. So sánh số bước lời giải
+![So sánh số bước](AI/Figure_15.png)
+
 #### ✅ Một vài nhận xét:
 + Generate and Test: hiệu suất ban đầu rất kém do có không gian trạng thái có rất nhiều trạng thái để sinh và kiểm tra. Sau khi kết hợp với kĩ thuật Degree Heuristic (Ưu tiên biến liên quan nhiều ràng buộc), giúp tăng xác suất gặp lời giải sớm hơn => hiệu suất trung bình
 + Backtracking: kiểm tra ràng buộc tại thời điểm gán, loại bỏ các nhánh sai sớm => hiệu suất trung bình tốt
@@ -327,11 +346,13 @@ Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Mach
 7. Episode kết thúc do lỗi hoặc thắng hoặc hết thời gian.
 8. Môi trường được thiết lập lại.
 9. Lặp lại các bước 2-8 cho số episode mong muốn.
+![Công thức](AI/dsf)
 
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
 Q - learning
 
+![Thuật toán q-learning](AI/q_learning.gif)
 
 ## 📝 3. Kết Luận
 
