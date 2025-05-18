@@ -5,7 +5,7 @@
 ### GVHD: Phan Thị Huyền Trang
 
 #### Link github: https://github.com/doanquantuan/DoAnCaNhan_AI.git
----
+
 
 ## 🎯 1. Mục Tiêu
 
@@ -20,7 +20,6 @@ Trong đồ án này, ta sử dụng các thuật toán tìm kiếm AI để gi�
 - Thời gian thực thi
 - Số trạng thái đã duyệt
 
----
 
 ## 📚 2. Nội Dung
 
@@ -83,7 +82,7 @@ Uninformed Search là nhóm thuật toán không sử dụng thông tin ước l
 | **IDS**    | ✅     | ❌     | ✅     | Lời giải ngắn (do kết hợp BFS và DFS), tốn thời gian do lặp đi lặp lại nhiều lần các node cùng cấp độ. vẫn chậm trong các trường hợp lời giải sâu. |
 | **UCS**    | ✅     | ❌     | ✅     | Lời giải tối ưu dựa trên tổng chi, thời gian tốt hơn IDS và tiết kiệm không gian lưu trữ => Hiệu quả khi các bước có chi phí không đồng đều.|
 
----
+
 ### 2.2. 🔍 Các Thuật Toán Tìm Kiếm Có Thông Tin (Informed Search)
 
 Informed Search là nhóm thuật toán tìm kiếm sử dụng hàm đánh giá (heuristic function) để ước lượng khoảng cách từ trạng thái hiện tại đến trạng thái đích giúp tối ưu lời giải và giảm thiểu thời gian và số trạng thái phải duyệt.
@@ -144,7 +143,7 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng hàm đánh giá
 - Greedy Best-First Search: nhanh, thường mở rất ít node vì chỉ đi theo hướng có giá trị hueristic nhỏ nhất, có thể bỏ qua đường đi tốt nhất dẫn đến chất lượng lời giải bị giảm so với A*. Tuy nhiên, nó lại tiết kiệm bộ nhớ hơn A* do không cần phải lưu tổng chi phí tích lũy.
 - A* Search: cân bằng giữa tốc độ và tối ưu khi có thể tìm ra lời giải ngắn với tốc độ tương đối, giảm chi phí đường đi khi xem xét giá trị chi phí thực và chi phí ước lượng.
 - IDA* Search: tối ưu như A*, tuy nhiên tốn thời gian hơn A* vì phải lặp lại nhiều lần (lặp sâu), mỗi vòng lặp lặp lại phần lớn không gian đã duyệt.
----
+
 ### 2.3. 🔍 Các Thuật Toán Tìm Kiếm Cục Bộ (Local Search)
 
 Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà không cần phải duyệt toàn bộ không gian trạng thái. Thay vào đó, nó chỉ tập trung vào một trạng thái hiện tại và các trạng thái lân cận của nó.
@@ -218,7 +217,8 @@ Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà kh
 - Simulated Annealing: có khả năng thoát khỏi cực trị cục bộ, tuy nhiên thời gian chạy dài và nhạy cảm cảm với các giá trị nhiệt độ và làm nguội => Cần tinh chỉnh các giá trị nhiệt độ đê đảm bảo tìm được trạng thái tốt nhất.
 - Loacl Beam Search: giảm nguy cơ mắc kẹt ở cực trị cục bộ, khám phá song song nhiều hướng, giá trị k càng lớn càng tốn thời gian và tài nguyên => Cần lựa chọn giá trị k hợp lí.
 - Genetic Algorithm: tìm lời giải đa dạng, có thể tránh kẹt tốt, cần nhiều thế hệ (tốc độ chậm), không đảm bảo tối ưu, phụ thuộc thiết kế: chọn lọc, đột biến, hàm đánh giá.
----
+
+
 ### 2.4. 🔍 Các Thuật Toán Tìm Kiếm Trong Môi Trường Phức Tạp (Searching In Complex Environments)
 
 Searching In Complex Environments là tìm kiếm trong các môi trường bất định và không chính xác. Các môi trường này có thể có các yếu tố như có cấu trúc tìm kiếm phức tạp với các hành động cho kết quả không chắc chắn, không thể biết chính xác trạng thái hiện tại hay chỉ quan sát được được một phần thông tin.
@@ -275,7 +275,7 @@ Searching In Complex Environments là tìm kiếm trong các môi trường bấ
 -	Searching With No Observation: belief state rất lớn, nếu chọn ra các trạng thái niềm tin quá khác nhau dẫn đến thời gian tìm kiếm rất lâu hoặc không tìm ra kế hoạch => hiệu suất thấp.
 -	Searching For Partially Observation: nếu loại trừ trạng thái không phù hợp giúp thu hẹp không gian niềm tin, hiệu suất phụ thuộc vào thông tin quan sát được ít hay nhiều => Hiệu suất trung bình.
 
----
+
 ### 2.5. Các thuật toán thỏa mãn ràng buộc (Constraint Satisfaction Problem - CSP)
 
 CSP là một bài toán trong trí tuệ nhân tạo mà lời giải là một tập giá trị gán cho các biến sao cho thỏa mãn toàn bộ ràng buộc (constraints) đã cho trước.
@@ -323,7 +323,7 @@ Gán giá trị cho tất cả các biến đảm bảo thỏa mãn ràng buộc
 + Backtracking: kiểm tra ràng buộc tại thời điểm gán, loại bỏ các nhánh sai sớm => hiệu suất trung bình tốt
 + AC-3 (+Backtracking): Lọc domain trước khi giải, giảm đáng kể số trường hợp cần xét, kết hợp với backtracking quay lui nếu phát hiện sai => hiệu suất tốt.
 
----
+
 ### 2.5. Học tăng cường (Reinforcement Learning)
 Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Machine Learning, trong đó một tác nhân học cách ra quyết định tối ưu thông qua việc tương tác với môi trường, nhận phần thưởng hoặc hình phạt cho từng hành động.
 
@@ -389,12 +389,12 @@ Q - learning
 - Nâng cấp giao diện trực quan giúp người dùng tương tác và hiểu quá trình giải bài toán.
 - Mở rộng bài toán sang các phiên bản phức tạp hơn như 15-puzzle hoặc các bài toán sắp xếp tương tự để phát triển các phương pháp giải tổng quát, hiệu quả cho không gian trạng thái lớn hơn.
 - Nghiên cứu các kỹ thuật tối ưu hóa và song song hóa nhằm tăng tốc quá trình giải quyết, từ đó có thể ứng dụng trong các hệ thống thời gian thực hoặc các bài toán phức tạp liên quan.
----
+
 ### Tài liệu tham khảo:
 - Russell, S. J., & Norvig, P. (2016). Artificial Intelligence: A Modern Approach (3rd ed.). Pearson
 - Pearl, J. (1984). Heuristics: Intelligent Search Strategies for Computer Problem Solving. Addison-Wesley.
 - Sutton, R. S., & Barto, A. G. (2018). Reinforcement Learning: An Introduction (2nd ed.). MIT Press.
 - GeeksforGeeks. (n.d.). Q-learning in Python. GeeksforGeeks. Truy cập ngày 18/5/2025 từ https://www.geeksforgeeks.org/q-learning-in-python/
----
+
 > 📁 *Đồ án này được thực hiện phục vụ môn học Trí tuệ nhân tạo. Mọi đóng góp hoặc phản hồi xin gửi qua GitHub.*
 
