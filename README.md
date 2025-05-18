@@ -247,10 +247,13 @@ Searching In Complex Environments là tìm kiếm trong các môi trường bấ
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
 1. And Or Search
+![Thuật toán And Or](AI/and_or.gif)
 
 2. Searching With No Observation
+![Thuật toán noObs](AI/no_observation.gif)
 
 3. Searching For Partially Observation
+![Thuật toán partialOb](AI/partial_observation.gif)
 
 #### ✅ Một vài nhận xét:
 -	And Or Search: Hiệu suất kém do phải xử lý cây kế hoạch có nhánh AND (số lượng node tăng nhanh nếu có nhiều hành động), đệ quy quá sâu không tìm được lời giải, gây lỗi => Hiệu suất rất thấp
@@ -277,6 +280,18 @@ CSP là một bài toán trong trí tuệ nhân tạo mà lời giải là một
 #### 🛠️ Giải pháp chung: 
 Gán giá trị cho tất cả các biến đảm bảo thỏa mãn ràng buộc.
 
+
+#### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
+
+1. Generate And Test
+![Thuật toán kiểm thử](AI/generate and test.gif)
+
+2. Backtracking
+![Thuật toán backtracking](AI/backtracking.gif)
+
+3. AC - 3
+![Thuật toán AC-3](AI/ac_3.gif)
+
 #### ✅ Một vài nhận xét:
 + Generate and Test: hiệu suất ban đầu rất kém do có không gian trạng thái có rất nhiều trạng thái để sinh và kiểm tra. Sau khi kết hợp với kĩ thuật Degree Heuristic (Ưu tiên biến liên quan nhiều ràng buộc), giúp tăng xác suất gặp lời giải sớm hơn => hiệu suất trung bình
 + Backtracking: kiểm tra ràng buộc tại thời điểm gán, loại bỏ các nhánh sai sớm => hiệu suất trung bình tốt
@@ -299,6 +314,11 @@ Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Mach
 ### 🛠️ Giải pháp:L
 Là chính sách (policy) hoặc dãy hành động sinh ra từ policy tối ưu, giúp agent đạt phần thưởng tối đa theo thời gian.
 
+
+#### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
+
+Q - learning
+![Thuật toán q-learning](AI/q_learning.gif)
 
 ## 📝 3. Kết Luận
 
