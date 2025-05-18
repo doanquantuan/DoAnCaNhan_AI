@@ -4,6 +4,7 @@
 ### Môn học: Trí Tuệ Nhân Tạo
 ### GVHD: Phan Thị Huyền Trang
 
+Link github: https://github.com/doanquantuan/DoAnCaNhan_AI.git
 ---
 
 ## 🎯 1. Mục Tiêu
@@ -353,7 +354,24 @@ Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Mach
 
 Q - learning
 
-![Thuật toán q-learning](AI/q_learning.gif)
+![Thuật toán q-learning](AI/cong_thuc_qlearning.gif)
+
+Trong đó:
+Q(s, a): Giá trị Q của hành động a trong trạng thái s, đại diện cho giá trị kỳ vọng của hành động đó.
+t: Thời điểm (lần cập nhật)
+α (alpha): Hệ số học (learning rate), 0 < 𝛼 ≤ 1. Điều chỉnh mức độ ta tin vào giá trị mới so với cũ.
+TD_t(s, a): Sai số dự đoán theo phương pháp Temporal Difference tại thời điểm t.
+
+R(s, a): Phần thưởng trực tiếp khi thực hiện hành động a tại trạng thái s.
+γ: Hệ số chiết khấu (discount factor), 0 ≤ 𝛾 ≤ 1, cho biết mức độ ưu tiên phần thưởng tương lai.
+P(s, a, s'): Xác suất chuyển từ trạng thái s sang trạng thái s' khi thực hiện hành động a.
+max Q(s', a'): Giá trị Q lớn nhất có thể đạt được tại trạng thái tiếp theo s', nếu chọn hành động tối ưu a'.
+
+🔁 Tóm tắt quá trình cập nhật Q-table:
+- Bắt đầu từ trạng thái s và thực hiện hành động a.
+- Nhận phần thưởng R(s, a) và xác định xác suất chuyển sang các trạng thái tiếp theo s'.
+- Tính sai số TD (temporal difference).
+- Cập nhật Q(s, a) theo sai số này.
 
 #### ✅ Một vài nhận xét:
 
