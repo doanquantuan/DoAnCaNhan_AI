@@ -252,10 +252,10 @@ Searching In Complex Environments là tìm kiếm trong các môi trường bấ
 
 3. Searching For Partially Observation
 
-
-#### 📊 So Sánh Hiệu Suất Thuật Toán
-
 #### ✅ Một vài nhận xét:
+-	And Or Search: Hiệu suất kém do phải xử lý cây kế hoạch có nhánh AND (số lượng node tăng nhanh nếu có nhiều hành động), đệ quy quá sâu không tìm được lời giải, gây lỗi => Hiệu suất rất thấp
+-	Searching With No Observation: belief state rất lớn, nếu chọn ra các trạng thái niềm tin quá khác nhau dẫn đến thời gian tìm kiếm rất lâu hoặc không tìm ra kế hoạch => hiệu suất thấp.
+-	Searching For Partially Observation: nếu loại trừ trạng thái không phù hợp giúp thu hẹp không gian niềm tin, hiệu suất phụ thuộc vào thông tin quan sát được ít hay nhiều => Hiệu suất trung bình.
 
 ---
 ### 2.5. Các thuật toán thỏa mãn ràng buộc (Constraint Satisfaction Problem - CSP)
@@ -274,7 +274,32 @@ CSP là một bài toán trong trí tuệ nhân tạo mà lời giải là một
 - Biến: Mỗi ô là 1 biến (8 biến và 1 ô trống).
 - Miền giá trị: {1, 2,…, 8}
 - Ràng buộc: Các ô có giá trị khác nhau không trùng lặp và theo thứ tự tăng dần từ trên xuống, từ trái qua phải.
-#### 🛠️ Giải pháp chung: Gán giá trị cho tất cả các biến đảm bảo thỏa mãn ràng buộc.
+#### 🛠️ Giải pháp chung: 
+Gán giá trị cho tất cả các biến đảm bảo thỏa mãn ràng buộc.
+
+#### ✅ Một vài nhận xét:
++ Generate and Test: hiệu suất ban đầu rất kém do có không gian trạng thái có rất nhiều trạng thái để sinh và kiểm tra. Sau khi kết hợp với kĩ thuật Degree Heuristic (Ưu tiên biến liên quan nhiều ràng buộc), giúp tăng xác suất gặp lời giải sớm hơn => hiệu suất trung bình
++ Backtracking: kiểm tra ràng buộc tại thời điểm gán, loại bỏ các nhánh sai sớm => hiệu suất trung bình tốt
++ AC-3 (+Backtracking): Lọc domain trước khi giải, giảm đáng kể số trường hợp cần xét, kết hợp với backtracking quay lui nếu phát hiện sai => hiệu suất tốt.
+
+---
+### 2.5. Học tăng cường (Reinforcement Learning)
+Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Machine Learning, trong đó một tác nhân học cách ra quyết định tối ưu thông qua việc tương tác với môi trường, nhận phần thưởng hoặc hình phạt cho từng hành động.
+
+#### 🧠 Thuật toán được áp dụng: Q - Learning
+#### 🧩 Các thành phần:
+- Tác nhân
+- Môi trường
+- Trạng thái
+- Hành động
+- Thưởng, phạt
+- Chiến lược chọn hành động
+- Hàm đánh giá
+- Bảng Q
+### 🛠️ Giải pháp:L
+Là chính sách (policy) hoặc dãy hành động sinh ra từ policy tối ưu, giúp agent đạt phần thưởng tối đa theo thời gian.
+
+
 ## 📝 3. Kết Luận
 
 ---
