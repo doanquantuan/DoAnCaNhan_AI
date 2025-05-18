@@ -288,7 +288,7 @@ Gán giá trị cho tất cả các biến đảm bảo thỏa mãn ràng buộc
 
 1. Generate And Test
 
-![Thuật toán kiểm thử](AI/generate and test.gif)
+![Thuật toán kiểm thử](AI/generate_test.gif)
 
 3. Backtracking
    
