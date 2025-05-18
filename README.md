@@ -4,7 +4,7 @@
 ### Môn học: Trí Tuệ Nhân Tạo
 ### GVHD: Phan Thị Huyền Trang
 
-Link github: https://github.com/doanquantuan/DoAnCaNhan_AI.git
+##### Link github: https://github.com/doanquantuan/DoAnCaNhan_AI.git
 ---
 
 ## 🎯 1. Mục Tiêu
@@ -348,24 +348,24 @@ Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Mach
 8. Môi trường được thiết lập lại.
 9. Lặp lại các bước 2-8 cho số episode mong muốn.
 
-![Công thức](AI/Ảnh chụp màn hình 2025-05-18 110140.png)
+![Công thức](AI/cong_thuc_qlearning.png)
 
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
 Q - learning
 
-![Thuật toán q-learning](AI/cong_thuc_qlearning.gif)
+![Thuật toán q-learning](AI/q_learning.gif)
 
 Trong đó:
-Q(s, a): Giá trị Q của hành động a trong trạng thái s, đại diện cho giá trị kỳ vọng của hành động đó.
-t: Thời điểm (lần cập nhật)
-α (alpha): Hệ số học (learning rate), 0 < 𝛼 ≤ 1. Điều chỉnh mức độ ta tin vào giá trị mới so với cũ.
-TD_t(s, a): Sai số dự đoán theo phương pháp Temporal Difference tại thời điểm t.
+- Q(s, a): Giá trị Q của hành động a trong trạng thái s, đại diện cho giá trị kỳ vọng của hành động đó.
+- t: Thời điểm (lần cập nhật)
+- α: Hệ số học (learning rate), 0 < 𝛼 ≤ 1. Điều chỉnh mức độ ta tin vào giá trị mới so với cũ.
+- TD_t(s, a): Sai số dự đoán theo phương pháp Temporal Difference tại thời điểm t.
 
-R(s, a): Phần thưởng trực tiếp khi thực hiện hành động a tại trạng thái s.
-γ: Hệ số chiết khấu (discount factor), 0 ≤ 𝛾 ≤ 1, cho biết mức độ ưu tiên phần thưởng tương lai.
-P(s, a, s'): Xác suất chuyển từ trạng thái s sang trạng thái s' khi thực hiện hành động a.
-max Q(s', a'): Giá trị Q lớn nhất có thể đạt được tại trạng thái tiếp theo s', nếu chọn hành động tối ưu a'.
+- R(s, a): Phần thưởng trực tiếp khi thực hiện hành động a tại trạng thái s.
+- γ: Hệ số chiết khấu (discount factor), 0 ≤ 𝛾 ≤ 1, cho biết mức độ ưu tiên phần thưởng tương lai.
+- P(s, a, s'): Xác suất chuyển từ trạng thái s sang trạng thái s' khi thực hiện hành động a.
+- max Q(s', a'): Giá trị Q lớn nhất có thể đạt được tại trạng thái tiếp theo s', nếu chọn hành động tối ưu a'.
 
 🔁 Tóm tắt quá trình cập nhật Q-table:
 - Bắt đầu từ trạng thái s và thực hiện hành động a.
