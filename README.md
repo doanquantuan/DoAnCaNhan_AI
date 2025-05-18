@@ -139,6 +139,10 @@ Informed Search là nhóm thuật toán tìm kiếm sử dụng hàm đánh giá
 4. So sánh chi phí
 ![So sánh chi phí](AI/Figure_7.png)
 
+#### ✅ Một vài nhận xét:
+- Greedy Best-First Search: nhanh, thường mở rất ít node vì chỉ đi theo hướng có giá trị hueristic nhỏ nhất, có thể bỏ qua đường đi tốt nhất dẫn đến chất lượng lời giải bị giảm so với A*. Tuy nhiên, nó lại tiết kiệm bộ nhớ hơn A* do không cần phải lưu tổng chi phí tích lũy.
+- A* Search: cân bằng giữa tốc độ và tối ưu khi có thể tìm ra lời giải ngắn với tốc độ tương đối, giảm chi phí đường đi khi xem xét giá trị chi phí thực và chi phí ước lượng.
+- IDA* Search: tối ưu như A*, tuy nhiên tốn thời gian hơn A* vì phải lặp lại nhiều lần (lặp sâu), mỗi vòng lặp lặp lại phần lớn không gian đã duyệt.
 ---
 ### 2.3. 🔍 Các Thuật Toán Tìm Kiếm Cục Bộ (Local Search)
 
@@ -198,8 +202,21 @@ Local Search là một nhóm các thuật toán tìm kiếm trạng thái mà kh
 
 #### 📊 So Sánh Hiệu Suất Thuật Toán
 
-#### ✅ Một vài nhận xét:
+1. So sánh thời gian thực thi và giá trị hueristic ở trạng thái cuối cùng
+![So sánh thời gian và hueristic](AI/Figure_8.png)
+   
+2. So sánh số node đã duyệt
+![So sánh số node](AI/Figure_9.png)
 
+3. So sánh số bước thực hiện
+![So sánh số bước](AI/Figure_10.png)
+#### ✅ Một vài nhận xét:
+- Simple Hill Climbing: rất nhanh, đơn giản, tốn ít bộ nhớ, dễ mắc kẹt và không tìm được lối ra trong không gian tìm kiếm phức tạp => Chỉ nên dùng cho bài toán dễ, nhỏ.
+- Steepest-Ascent Hill Climbing; mặc dù có những cải tiến từ Simple Hill Climbing những vẫn rất dễ thất bại trong không gian tìm kiếm phức tạp => Chỉ nên dùng cho bài toán dễ, nhỏ.
+- Stochastic Hill Climbing: có thể tránh mắc kẹt tại các cực trị cục bộ nhỏ, khám phá đa dạng hơn so với Steepest HC, dễ bỏ lỡ cơ hội cải tiến lớn do việc chọn ngẫu nhiên => Chỉ nên dùng cho bài toán dễ, nhỏ.
+- Simulated Annealing: có khả năng thoát khỏi cực trị cục bộ, tuy nhiên thời gian chạy dài và nhạy cảm cảm với các giá trị nhiệt độ và làm nguội => Cần tinh chỉnh các giá trị nhiệt độ đê đảm bảo tìm được trạng thái tốt nhất.
+- Loacl Beam Search: giảm nguy cơ mắc kẹt ở cực trị cục bộ, khám phá song song nhiều hướng, giá trị k càng lớn càng tốn thời gian và tài nguyên => Cần lựa chọn giá trị k hợp lí.
+- Genetic Algorithm: tìm lời giải đa dạng, có thể tránh kẹt tốt, cần nhiều thế hệ (tốc độ chậm), không đảm bảo tối ưu, phụ thuộc thiết kế: chọn lọc, đột biến, hàm đánh giá.
 ---
 ### 2.4. 🔍 Các Thuật Toán Tìm Kiếm Trong Môi Trường Phức Tạp (Searching In Complex Environments)
 
