@@ -247,12 +247,15 @@ Searching In Complex Environments là tìm kiếm trong các môi trường bấ
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
 1. And Or Search
+
 ![Thuật toán And Or](AI/and_or.gif)
 
-2. Searching With No Observation
+3. Searching With No Observation
+
 ![Thuật toán noObs](AI/no_observation.gif)
 
-3. Searching For Partially Observation
+5. Searching For Partially Observation
+
 ![Thuật toán partialOb](AI/partial_observation.gif)
 
 #### ✅ Một vài nhận xét:
@@ -284,12 +287,15 @@ Gán giá trị cho tất cả các biến đảm bảo thỏa mãn ràng buộc
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
 1. Generate And Test
+
 ![Thuật toán kiểm thử](AI/generate and test.gif)
 
-2. Backtracking
+3. Backtracking
+   
 ![Thuật toán backtracking](AI/backtracking.gif)
 
-3. AC - 3
+5. AC - 3
+
 ![Thuật toán AC-3](AI/ac_3.gif)
 
 #### ✅ Một vài nhận xét:
@@ -318,6 +324,7 @@ Là chính sách (policy) hoặc dãy hành động sinh ra từ policy tối ư
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
 Q - learning
+
 ![Thuật toán q-learning](AI/q_learning.gif)
 
 ## 📝 3. Kết Luận
