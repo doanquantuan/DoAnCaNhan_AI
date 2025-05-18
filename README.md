@@ -317,9 +317,16 @@ Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Mach
 - Chiến lược chọn hành động
 - Hàm đánh giá
 - Bảng Q
-### 🛠️ Giải pháp:L
-Là chính sách (policy) hoặc dãy hành động sinh ra từ policy tối ưu, giúp agent đạt phần thưởng tối đa theo thời gian.
-
+### 🛠️ Giải pháp:
+1. Khởi tạo một bảng Q và điền các giá trị ban đầu vào đó.
+2. Bắt đầu một episode.
+3. Tác nhân thực hiện hành động.
+4. Xác định phần thưởng nhận được.
+5. Chuyển sang trạng thái mới.
+6. Q-value mới được tính cho trạng thái mới.
+7. Episode kết thúc do lỗi hoặc thắng hoặc hết thời gian.
+8. Môi trường được thiết lập lại.
+9. Lặp lại các bước 2-8 cho số episode mong muốn.
 
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
