@@ -346,13 +346,16 @@ Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Mach
 7. Episode kết thúc do lỗi hoặc thắng hoặc hết thời gian.
 8. Môi trường được thiết lập lại.
 9. Lặp lại các bước 2-8 cho số episode mong muốn.
-![Công thức](AI/dsf)
+
+![Công thức](AI/Ảnh chụp màn hình 2025-05-18 110140.png)
 
 #### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
 
 Q - learning
 
 ![Thuật toán q-learning](AI/q_learning.gif)
+
+#### ✅ Một vài nhận xét:
 
 ## 📝 3. Kết Luận
 
