@@ -380,7 +380,21 @@ Q - learning
 
 ## 📝 3. Kết Luận
 
----
+### Các kết quả đạt được:
+- Áp dụng thành công 6 nhóm thuật toán vào bài toán 8 puzzle.
+- Hiểu được ưu điểm, nhược điểm và khả năng ứng dụng hiệu quả của từng thuật toán AI trong việc giải quyết các bài toán tìm kiếm trạng thái.
+- Qua quá trình thực nghiệm và đánh giá hiệu suất, ta có một số kết luận về các nhóm thuật toán như sau: Uninformed Search đảm bảo tìm được nhưng hiệu suất thấp hơn rất nhiều khi số bước tăng cao; Informed Search đảm bảo tìm được lời giải với đường đi ngắn hơn và tốt hơn; Local Search tối ưu hóa và không cần giải chính xác tuyệt đối tuy nhiên dễ mắc kẹt khi không gian tìm kiếm quá phức tạp; Searching In Complex Environments có không gian trạng thái lớn, có thể không biết rõ trạng thái, chi phí hành động, hoặc xác suất chuyển trạng thái; CSP giải quyết các bài toán phức tạp bằng cách biểu diễn các biến và ràng buộc một cách rõ ràng; Reinforcement Learning cải thiện chính sách hành động để tối ưu hóa phần thưởng lâu dài, tuy nhiên quá trình học thường đòi hỏi nhiều tài nguyên tính toán và thời gian do phải thử nghiệm và sai sót liên tục.
 
+### Định hướng phát triển
+- Nâng cấp giao diện trực quan giúp người dùng tương tác và hiểu quá trình giải bài toán.
+- Mở rộng bài toán sang các phiên bản phức tạp hơn như 15-puzzle hoặc các bài toán sắp xếp tương tự để phát triển các phương pháp giải tổng quát, hiệu quả cho không gian trạng thái lớn hơn.
+- Nghiên cứu các kỹ thuật tối ưu hóa và song song hóa nhằm tăng tốc quá trình giải quyết, từ đó có thể ứng dụng trong các hệ thống thời gian thực hoặc các bài toán phức tạp liên quan.
+---
+### Tài liệu tham khảo:
+- Russell, S. J., & Norvig, P. (2016). Artificial Intelligence: A Modern Approach (3rd ed.). Pearson
+- Pearl, J. (1984). Heuristics: Intelligent Search Strategies for Computer Problem Solving. Addison-Wesley.
+- Sutton, R. S., & Barto, A. G. (2018). Reinforcement Learning: An Introduction (2nd ed.). MIT Press.
+- GeeksforGeeks. (n.d.). Q-learning in Python. GeeksforGeeks. Truy cập ngày 18/5/2025 từ https://www.geeksforgeeks.org/q-learning-in-python/
+---
 > 📁 *Đồ án này được thực hiện phục vụ môn học Trí tuệ nhân tạo. Mọi đóng góp hoặc phản hồi xin gửi qua GitHub.*
 
