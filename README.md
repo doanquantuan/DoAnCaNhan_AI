@@ -4,7 +4,7 @@
 ### Môn học: Trí Tuệ Nhân Tạo
 ### GVHD: Phan Thị Huyền Trang
 
-##### Link github: https://github.com/doanquantuan/DoAnCaNhan_AI.git
+#### Link github: https://github.com/doanquantuan/DoAnCaNhan_AI.git
 ---
 
 ## 🎯 1. Mục Tiêu
@@ -350,11 +350,6 @@ Reinforcement Learning (RL) hay Học tăng cường là một nhánh của Mach
 
 ![Công thức](AI/cong_thuc_qlearning.png)
 
-#### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
-
-Q - learning
-
-![Thuật toán q-learning](AI/q_learning.gif)
 
 Trong đó:
 - Q(s, a): Giá trị Q của hành động a trong trạng thái s, đại diện cho giá trị kỳ vọng của hành động đó.
@@ -373,7 +368,15 @@ Trong đó:
 - Tính sai số TD (temporal difference).
 - Cập nhật Q(s, a) theo sai số này.
 
+#### ▶️ Video mô phỏng quá trình thuật toán giải bài toán 8-Puzzle
+
+Q - learning
+
+![Thuật toán q-learning](AI/q_learning.gif)
+
 #### ✅ Một vài nhận xét:
+- Chiến lược khám phá ảnh hưởng trực tiếp đến hiệu suất thời gian học và độ chính xác của chính sách cuối cùng, ε nhỏ thì dễ mắc kẹt, ε lớn thì học chậm do quá nhiều hành động.
+- Tốn bộ nhớ, tốc độ cập nhật chậm. 
 
 ## 📝 3. Kết Luận
 
