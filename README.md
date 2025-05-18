@@ -268,7 +268,7 @@ Searching In Complex Environments là tìm kiếm trong các môi trường bấ
 ![So sánh số node](AI/Figure_12.png)
 
 3. So sánh số bước lời giải
-![So sánh số bước](AI/Figure_113.png)
+![So sánh số bước](AI/Figure_13.png)
 
 #### ✅ Một vài nhận xét:
 -	And Or Search: Hiệu suất kém do phải xử lý cây kế hoạch có nhánh AND (số lượng node tăng nhanh nếu có nhiều hành động), đệ quy quá sâu không tìm được lời giải, gây lỗi => Hiệu suất rất thấp
